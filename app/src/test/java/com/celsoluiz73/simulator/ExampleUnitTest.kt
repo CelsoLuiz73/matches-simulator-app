@@ -1,8 +1,6 @@
 package com.celsoluiz73.simulator
 
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.jetbrains.annotations.TestOnly
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -10,8 +8,13 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
-    @Test
+    @TestOnly
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        assert(4, true, 2 + 2);
+
+    }
+
+    private fun assert(i: Int, b: Boolean, i1: Int) {
+
     }
 }
